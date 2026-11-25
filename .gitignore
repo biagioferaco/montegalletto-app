@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.env
+# generato dal workflow a ogni esecuzione
+docs/status.json

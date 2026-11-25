@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ascensore Montegalletto</title>
+  <meta name="description" content="Stato, orari e avvisi dell'ascensore Castello D'Albertis – Montegalletto (via Balbi – corso Dogali, Genova).">
+  <meta name="theme-color" content="#3f5f60" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151c1c" media="(prefers-color-scheme: dark)">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icons/favicon.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="top">
+    <img src="icons/icon-192.png" alt="" width="40" height="40">
+    <div>
+      <h1>Ascensore Montegalletto</h1>
+      <p class="sub">Via Balbi ⇄ Corso Dogali</p>
+    </div>
+  </header>
+
+  <main>
+    <section id="status" class="card status" data-state="loading" aria-live="polite">
+      <p class="state-label">Caricamento…</p>
+      <p class="state-detail"></p>
+      <p class="state-extra"></p>
+    </section>
+
+    <section id="review" class="card warn" hidden>
+      <h2>Avviso da controllare</h2>
+      <p>AMT ha pubblicato un avviso che non riesco a interpretare in automatico. Leggilo prima di partire:</p>
+      <ul></ul>
+    </section>
+
+    <section class="card">
+      <h2>Orari di oggi</h2>
+      <p id="today" class="today"></p>
+      <table class="hours">
+        <tr><th scope="row">Feriali (lun–sab)</th><td id="h-feriale"></td></tr>
+        <tr><th scope="row">Domeniche e festivi</th><td id="h-festivo"></td></tr>
+      </table>
+      <p class="muted">Una corsa circa ogni 7 minuti. <a id="hours-src" href="https://www.amt.genova.it/amt/trasporto-multimodale/ascensori/" target="_blank" rel="noopener">Orari sul sito AMT</a></p>
+    </section>
+
+    <section id="upcoming" class="card" hidden>
+      <h2>Chiusure in programma</h2>
+      <ul class="closures"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Ultimo avviso AMT</h2>
+      <article id="news" class="news"><p class="muted">Caricamento…</p></article>
+      <details id="older" hidden>
+        <summary>Avvisi precedenti</summary>
+        <ul class="older"></ul>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <p id="freshness" class="muted"></p>
+    <p class="muted">App non ufficiale. Fonte dei dati: <a href="https://www.amt.genova.it/" target="_blank" rel="noopener">AMT Genova</a>.</p>
+  </footer>
+</body>
+</html>
