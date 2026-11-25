@@ -1,8 +1,8 @@
 // Service worker: l'app si apre anche offline; lo stato arriva dalla rete quando possibile.
-const CACHE = "montegalletto-v1";
+const CACHE = "montegalletto-v2";
 const SHELL = [
   "./", "index.html", "style.css", "app.js", "schedule.js", "manifest.webmanifest",
-  "icons/icon-192.png", "icons/favicon.png",
+  "icons/icon-192.png", "icons/favicon.png", "icons/banner.png",
 ];
 
 self.addEventListener("install", (e) => {
