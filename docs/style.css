@@ -42,7 +42,8 @@ main, .top, footer { max-width: 560px; margin: 0 auto; }
 
 .top { padding: 16px 0 14px; text-align: center; }
 .top h1 { margin: 0; line-height: 0; }
-.banner { display: block; width: 100%; height: auto; border-radius: 14px; }
+img { max-width: 100%; height: auto; }
+.banner { display: block; width: 100%; max-width: 100%; height: auto; border-radius: 14px; }
 .sub { margin: 8px 0 0; color: var(--muted); font-size: .9rem; }
 h2 { font-size: .8rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 10px; }
 
